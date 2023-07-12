@@ -2,13 +2,14 @@ import react from "react";
 import Header from "./components/Header";
 
 import "./styles.css";
-import Main from "./components/context/contextCom/Maincontext";
+import ThemeProvider from './components/ThemeSwitcher/ThemeProvider'
+import AppOne from "./components/ThemeSwitcher/ThemeProvider";
 
 export default function App() {
   return (
     <div>
       <Header />
-      <Main />
+   <AppOne />
     </div>
   );
 }
