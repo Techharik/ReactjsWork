@@ -2,9 +2,12 @@ import React, { useContext, useState } from 'react'
 import redContext from '../redcontext';
 import {TODO_ADD,REMOVE_TODO} from '../action.types';
 
+
+
 function AddTodo() {
-  const {todos, dispatch} = useContext(redContext);
+  const {todos, dispatch,theme} = useContext(redContext);
   const [inputVal, setInputVal]=useState('')
+  const [themes,setTheme]=theme
 
   const handleSubmit = e =>{
      e.preventDefault()
@@ -50,12 +53,14 @@ function AddTodo() {
 
 
 
-<form onSubmit={handleSubmit} >
+<form onSubmit={handleSubmit}  className={themes === 'light'? 'dark' : 'light'}>
       <input type='text' placeholder='Enter your value' 
       onChange={ (e)=>setInputVal(e.target.value)} 
       value={inputVal}/>
       <button>Click</button>
     </form>
+
+    <button onClick={()=>setTheme(themes ==='light'?'dark':'light')}>{ themes === 'light'? 'dark':'light'}</button>
 </>
 
     
