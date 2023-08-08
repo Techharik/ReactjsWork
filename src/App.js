@@ -7,6 +7,7 @@ import AppOne from "./components/ThemeSwitcher/ThemeProvider";
 import Mainred from "./components/TodoReducer/Mainred";
 import Todomain from "./components/localStorage/Todomain";
 import RouterMain from "./components/Router/RouterMain";
+import Mapp from "./components/firebase/Mapp";
 
 export default function App() {
   return (
@@ -17,7 +18,10 @@ export default function App() {
   
     {/* <Mainred /> */}
     {/* <Todomain /> */} 
-    <RouterMain />
+    {/* <RouterMain />
+     */}
+
+     <Mapp />
     </div>
   );
 }
